@@ -159,15 +159,17 @@ Both questions take a live A/B test (REPORT.md §7–8;
 
 ## Reproduce
 
-Requirements: [pixi](https://pixi.sh), JDK 17 (parser build), a Steam Web API key,
-a CUDA GPU for training.
+Requirements: [pixi](https://pixi.sh), JDK 17 (parser build), a CUDA GPU for
+training. No API keys needed: replay discovery pages OpenDota's public index
+(an `OPENDOTA_API_KEY` lifts rate limits; a Steam key is only for the
+alternative `--source steam` sequence scan).
 
 ```bash
 pixi install
 git submodule update --init                  # dota2-ad-parser (only needed for replay collection)
 (cd dota2-ad-parser && mvn package)          # needs JDK 17
 
-export STEAM_API_KEY=...                     # OPENDOTA_API_KEY optional (lifts rate limits)
+export OPENDOTA_API_KEY=...                  # optional — lifts OpenDota rate limits
 export DOTA2AD_ROOT=work
 pixi run collect -- -n 100000                # discover + download + parse AD replays
 pixi run build-dataset                       # matches.jsonl, split, vocabs, match_stats

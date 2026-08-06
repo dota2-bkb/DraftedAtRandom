@@ -994,7 +994,7 @@ def run_pipeline(
     n: int,
     output_dir: Path,
     clarity_jar: Path,
-    api_key: str,
+    api_key: str | None,
     start_seq_num: int | None,
     num_downloaders: int,
     num_parsers: int,
@@ -1081,6 +1081,7 @@ def run_pipeline(
             disc = discover_matches_explorer(
                 n, output_dir, opendota_limiter, fatal_error, stats, retention_days)
         else:
+            assert api_key is not None  # main() requires the key for --source steam
             disc = discover_matches(api_key, n, start_seq_num, fatal_error, stats)
         for match_id, seq in disc:
             if fatal_error.is_set():
@@ -1249,12 +1250,13 @@ def main():
     parser.add_argument(
         "--source",
         choices=["steam", "explorer"],
-        default="steam",
-        help="Discovery source. 'steam' scans GetMatchHistoryBySequenceNum "
-        "(slow but ~complete); 'explorer' pages OpenDota /explorer for AD "
-        "match_ids oldest-first (fast, sampled, replay-retention-bounded; "
-        "auto-skips already-collected so --resume is implicit). The "
-        "--start-*/--resume options apply to 'steam' only.",
+        default="explorer",
+        help="Discovery source. 'explorer' (default) pages OpenDota /explorer "
+        "for AD match_ids oldest-first (fast, no API key required, "
+        "replay-retention-bounded; auto-skips already-collected so --resume "
+        "is implicit); 'steam' scans GetMatchHistoryBySequenceNum (slow but "
+        "~complete, needs STEAM_API_KEY). The --start-*/--resume options "
+        "apply to 'steam' only.",
     )
     parser.add_argument(
         "--retention-days",
@@ -1283,9 +1285,10 @@ def main():
         return 1
 
     api_key = args.steam_api_key or os.environ.get("STEAM_API_KEY")
-    if not api_key:
+    if args.source == "steam" and not api_key:
         print(
-            "Error: Steam API key required (--steam-api-key or STEAM_API_KEY env)",
+            "Error: --source steam needs a Steam API key "
+            "(--steam-api-key or STEAM_API_KEY env)",
             file=sys.stderr,
         )
         return 1
