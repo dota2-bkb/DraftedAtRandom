@@ -1,0 +1,18 @@
+{
+  "forced_share": 0.01613755678950025,
+  "n_analytic": 79240,
+  "n_bots": 494,
+  "n_excluded": 22856,
+  "n_forced": 63937,
+  "n_forced_matches": 35861,
+  "n_gone": 2104,
+  "n_leavers": 17192,
+  "n_raw": 102096,
+  "n_swaps": 5941,
+  "n_test": 15837,
+  "n_test_forced": 12750,
+  "n_train": 47575,
+  "n_train_forced": 38302,
+  "n_val": 15828,
+  "n_val_forced": 12885
+}

@@ -1,0 +1,186 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dota2ad"
+version = "0.1.0"
+requires-python = ">=3.14"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dota2ad"]
+
+# Whole-program dead-code detection. Scans src + experiments together so a
+# package symbol used by even one experiment counts as live; whitelist.py holds
+# the curated framework false positives (Litestar handlers, dynamic dispatch).
+[tool.vulture]
+paths = ["src/dota2ad", "experiments"]
+ignore_decorators = ["@get", "@post", "@put", "@delete", "@patch"]
+ignore_names = [
+    # Framework-reserved: invoked by PyTorch (nn.Module.__call__) and Litestar
+    # (Controller DI), never called in-code.
+    "forward",
+    "dependencies",
+    # msgspec response-model fields in inference/server/schemas.py — set at
+    # construction and serialized to JSON for the frontend, never read in Python.
+    # Only the field *names* are ignored; struct classes are still scanned, so a
+    # dead response model is still caught.
+    "active_weights",
+    "hero_name", "basics_names", "ult_name",
+    "hero_pool_names", "basic_pool_names", "ult_pool_names",
+    "hero_pool_all_names", "basic_pool_all_names", "ult_pool_all_names",
+    "confidence", "preferences", "error",
+]
+min_confidence = 60
+sort_by_size = true
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.dependencies]
+python = ">=3.14.3,<3.15"
+pytorch = ">=2.10.0,<3"
+numpy = ">=2.4.2,<3"
+scikit-learn = ">=1.8.0,<2"
+requests = ">=2.32.5,<3"
+python-dotenv = ">=1.2.1,<2"
+plotly = ">=6.5.2,<7"
+matplotlib = ">=3.10,<4"
+msgspec = ">=0.20.0,<0.21"
+litestar = ">=2.21,<3"
+uvicorn = ">=0.30,<1"
+hatchling = "*"
+
+
+[tool.pixi.pypi-dependencies]
+dota2ad = { path = ".", editable = true }
+
+# --------------------------------------------------------------------------
+# Data pipeline
+# --------------------------------------------------------------------------
+
+[tool.pixi.tasks.collect]
+cmd = "python -m dota2ad.pipeline collect"
+description = "Fetch raw matches into parsed/"
+
+[tool.pixi.tasks.build-dataset]
+cmd = "python -m dota2ad.pipeline build-dataset"
+description = "Build dataset/matches.jsonl, vocabs.json, and match_stats.jsonl"
+inputs = [
+    "parsed/**",
+    "src/dota2ad/pipeline/build_dataset.py",
+    "src/dota2ad/pipeline/build_match_stats.py",
+    "src/dota2ad/core/**/*.py",
+]
+outputs = [
+    "dataset/matches.jsonl",
+    "dataset/vocabs.json",
+    "dataset/split.json",
+    "dataset/excluded_matches.json",
+    "dataset/match_stats.jsonl",
+]
+
+# --------------------------------------------------------------------------
+# Experiments — each is experiments/<name>/run.py (+ README.md). Invoke with
+# DOTA2AD_ROOT=<work_dir> and -e cuda for anything GPU-bound. No auto-chaining.
+# See experiments/ and REPORT.md for the full story.
+# --------------------------------------------------------------------------
+
+# Foundational models
+[tool.pixi.tasks.train-policy]
+cmd = "python experiments/train-policy/run.py"
+description = "Train behavior policy (V+1 head, the canonical sim/DQN policy) → models/policy.pt"
+
+[tool.pixi.tasks.train-stats]
+cmd = "python experiments/train-stats/run.py"
+description = "Train stats model → models/match_stats.pt"
+
+[tool.pixi.tasks.train-stats-dqn]
+cmd = "python experiments/stats-dqn-mc/run.py"
+description = "Train stats-DQN (MC + usup + BC-mask) → models/stats_dqn.pt (the shipped recommender)"
+
+# Causal evaluation (the random-pick natural experiment)
+[tool.pixi.tasks.stats-causal-rank]
+cmd = "python experiments/stats-causal-rank/run.py"
+description = "Causal ranking: β̂(BC/Q/permuted), rank+score (held-out test)"
+
+[tool.pixi.tasks.stats-cql-vs-bc]
+cmd = "python experiments/stats-cql-vs-bc/run.py"
+description = "Recommender diagnostics: de-cloning ablation, MMR premise/gradient, power (held-out val)"
+
+[tool.pixi.tasks.density-validate]
+cmd = "python experiments/stats-density-validate/run.py"
+description = "Evidence that state rarity tracks StatsModel error (composite RMSE by support bin)"
+
+[tool.pixi.tasks.stats-generalization]
+cmd = "python experiments/stats-generalization/run.py"
+description = "Transportability/robustness: covariate shift + per-stat homogeneity + placebos (held-out test)"
+
+[tool.pixi.tasks.stats-skill-headroom]
+cmd = "python experiments/stats-skill-headroom/headroom.py"
+description = "Offline headroom: β̂(BC | play-skill high vs low) on the skill-rating variant (run premise.py + rating.py + retrain first)"
+
+[tool.pixi.tasks.stats-recommender-value]
+cmd = "python experiments/stats-recommender-value/run.py"
+description = "Per-pick value of the recommender (BC-top) vs random and vs a typical human trajectory (held-out test)"
+
+[tool.pixi.tasks.check-docs]
+cmd = "python experiments/check_docs.py"
+description = "Verify the report's quoted headline numbers against the results manifests"
+
+[tool.pixi.tasks.random-mechanism]
+cmd = "python experiments/random-mechanism/run.py"
+description = "The forced-pick propensity (decompiled): kind-share calibration, within-kind uniformity, ran1 RNG, survivorship probe"
+
+# --------------------------------------------------------------------------
+# Dev stack
+# --------------------------------------------------------------------------
+
+[tool.pixi.tasks.figures]
+cmd = "python experiments/figures.py"
+description = "Regenerate README figures from the results manifests"
+
+[tool.pixi.tasks.backend]
+cmd = "python -m dota2ad.inference serve"
+description = "Litestar API only (:5000)"
+
+[tool.pixi.tasks.frontend]
+cmd = "npm run dev"
+cwd = "web"
+description = "Vite frontend only (:5001)"
+
+[tool.pixi.tasks.gen-types]
+cmd = "npm run gen-types"
+cwd = "web"
+description = "Regenerate web/src/api/types.ts from /schema/openapi.json"
+
+[tool.pixi.feature.cuda.system-requirements]
+cuda = "13.1"
+
+[tool.pixi.feature.lint.dependencies]
+python = ">=3.14.3,<3.15"
+vulture = "*"
+
+[tool.pixi.feature.lint.tasks.deadcode]
+cmd = "vulture"
+description = "Whole-program dead-code scan (src + experiments)"
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+cuda = { features = ["cuda"], solve-group = "cuda" }
+lint = { features = ["lint"], no-default-feature = true }
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B", "UP", "SIM", "RUF", "PLC", "PLE", "PLW"]
+ignore = [
+    "E702",    # semicolon compaction is house style in the experiment scripts
+    "E741",    # short math names in estimator code
+    "RUF001", "RUF002", "RUF003",  # the report's math notation in strings/docstrings/comments
+    "PLC0414", # explicit re-export aliases mark intentional public API
+    "PLC0415", # deliberate late imports (import-cycle breaks)
+    "PLW2901", # normalize-the-loop-var-at-loop-top pattern
+]
+
+[tool.ruff.lint.per-file-ignores]
+"src/dota2ad/inference/server/routes.py" = ["E402", "RUF012"]  # late import breaks a cycle; Litestar configures controllers via class attrs
+"src/dota2ad/suggest/density.py" = ["E402"]

@@ -1,0 +1,238 @@
+% Related work for the Dota 2 Ability-Draft causal-recommender study.
+% Discipline: an entry lives here only if a SPECIFIC idea in the report maps to it.
+% Do not cite for topical resemblance.
+
+% ---------------------------------------------------------------------------
+% Off-policy / counterfactual evaluation from logs  (the V(π) = E[m·π(A)·ỹ] IPW)
+% ---------------------------------------------------------------------------
+@article{horvitz1952,
+  author  = {Horvitz, D. G. and Thompson, D. J.},
+  title   = {A Generalization of Sampling Without Replacement from a Finite Universe},
+  journal = {Journal of the American Statistical Association},
+  volume  = {47}, number = {260}, pages = {663--685}, year = {1952}
+}
+
+@inproceedings{li2011replay,
+  author    = {Li, Lihong and Chu, Wei and Langford, John and Wang, Xuanhui},
+  title     = {Unbiased Offline Evaluation of Contextual-Bandit-Based News Article Recommendation Algorithms},
+  booktitle = {WSDM}, year = {2011}
+}
+
+@inproceedings{langford2008scavenging,
+  author    = {Langford, John and Strehl, Alexander and Wortman, Jennifer},
+  title     = {Exploration Scavenging},
+  booktitle = {ICML}, year = {2008}
+}
+
+@inproceedings{strehl2010implicit,
+  author    = {Strehl, Alexander L. and Langford, John and Li, Lihong and Kakade, Sham M.},
+  title     = {Learning from Logged Implicit Exploration Data},
+  booktitle = {NeurIPS}, year = {2010}
+}
+
+@article{bottou2013counterfactual,
+  author  = {Bottou, L\'eon and Peters, Jonas and Qui\~nonero-Candela, Joaquin and Charles, Denis X.
+             and Chickering, D. Max and Portugaly, Elon and Ray, Dipankar and Simard, Patrice and Snelson, Ed},
+  title   = {Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising},
+  journal = {Journal of Machine Learning Research}, volume = {14}, pages = {3207--3260}, year = {2013}
+}
+
+@inproceedings{dudik2011dr,
+  author    = {Dud\'ik, Miroslav and Langford, John and Li, Lihong},
+  title     = {Doubly Robust Policy Evaluation and Learning},
+  booktitle = {ICML}, year = {2011}
+}
+
+@article{swaminathan2015crm,
+  author  = {Swaminathan, Adith and Joachims, Thorsten},
+  title   = {Batch Learning from Logged Bandit Feedback through Counterfactual Risk Minimization},
+  journal = {Journal of Machine Learning Research}, volume = {16}, year = {2015}
+}
+
+% ---------------------------------------------------------------------------
+% Design-based causal inference / natural experiments  (the timeout device)
+% ---------------------------------------------------------------------------
+@article{imbens1994late,
+  author  = {Imbens, Guido W. and Angrist, Joshua D.},
+  title   = {Identification and Estimation of Local Average Treatment Effects},
+  journal = {Econometrica}, volume = {62}, number = {2}, pages = {467--475}, year = {1994}
+}
+
+@article{hudgens2008interference,
+  author  = {Hudgens, Michael G. and Halloran, M. Elizabeth},
+  title   = {Toward Causal Inference With Interference},
+  journal = {Journal of the American Statistical Association},
+  volume  = {103}, number = {482}, pages = {832--842}, year = {2008}
+}
+
+% ---------------------------------------------------------------------------
+% Transportability / external validity  (§7: extend the LATE toward the target)
+% ---------------------------------------------------------------------------
+@article{pearl2014transportability,
+  author  = {Pearl, Judea and Bareinboim, Elias},
+  title   = {External Validity: From Do-Calculus to Transportability Across Populations},
+  journal = {Statistical Science}, volume = {29}, number = {4}, pages = {579--595}, year = {2014}
+}
+
+@incollection{angrist2013extrapolate,
+  author    = {Angrist, Joshua D. and Fern\'andez-Val, Iv\'an},
+  title     = {ExtrapoLATE-ing: External Validity and Overidentification in the LATE Framework},
+  booktitle = {Advances in Economics and Econometrics}, editor = {Acemoglu, Daron and Arellano, Manuel and Dekel, Eddie},
+  publisher = {Cambridge University Press}, year = {2013}
+}
+
+@article{stuart2011generalizability,
+  author  = {Stuart, Elizabeth A. and Cole, Stephen R. and Bradshaw, Catherine P. and Leaf, Philip J.},
+  title   = {The Use of Propensity Scores to Assess the Generalizability of Results from Randomized Trials},
+  journal = {Journal of the Royal Statistical Society: Series A}, volume = {174}, number = {2}, pages = {369--386}, year = {2011}
+}
+
+% ---------------------------------------------------------------------------
+% Offline RL  (Q's headline config = usup + BC-plausibility mask; lineage only)
+% ---------------------------------------------------------------------------
+@inproceedings{fujimoto2019bcq,
+  author    = {Fujimoto, Scott and Meger, David and Precup, Doina},
+  title     = {Off-Policy Deep Reinforcement Learning without Exploration},
+  booktitle = {ICML}, year = {2019}
+}
+
+@inproceedings{kumar2020cql,
+  author    = {Kumar, Aviral and Zhou, Aurick and Tucker, George and Levine, Sergey},
+  title     = {Conservative Q-Learning for Offline Reinforcement Learning},
+  booktitle = {NeurIPS}, year = {2020}
+}
+
+% ---------------------------------------------------------------------------
+% Equivalence / non-inferiority testing  (§5 & App. A: the Q-vs-BC margin)
+% ---------------------------------------------------------------------------
+@article{lakens2017equiv,
+  author  = {Lakens, Dani\"el},
+  title   = {Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses},
+  journal = {Social Psychological and Personality Science},
+  volume  = {8}, number = {4}, pages = {355--362}, year = {2017}
+}
+
+@article{dagostino2003noninferiority,
+  author  = {D'Agostino, Ralph B. and Massaro, Joseph M. and Sullivan, Lisa M.},
+  title   = {Non-inferiority Trials: Design Concepts and Issues -- the Encounters of Academic Consultants in Statistics},
+  journal = {Statistics in Medicine},
+  volume  = {22}, number = {2}, pages = {169--186}, year = {2003}
+}
+
+@article{benjamini1995fdr,
+  author  = {Benjamini, Yoav and Hochberg, Yosef},
+  title   = {Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing},
+  journal = {Journal of the Royal Statistical Society: Series B},
+  volume  = {57}, number = {1}, pages = {289--300}, year = {1995}
+}
+
+% ---------------------------------------------------------------------------
+% Wisdom of crowds  (§6: the consensus mode beats a typical individual)
+% ---------------------------------------------------------------------------
+@article{galton1907vox,
+  author  = {Galton, Francis},
+  title   = {Vox Populi},
+  journal = {Nature}, volume = {75}, number = {1949}, pages = {450--451}, year = {1907}
+}
+
+% ---------------------------------------------------------------------------
+% Causal recommendation / unbiased learning-to-rank  (recsys-side causal-eval framing)
+% ---------------------------------------------------------------------------
+@inproceedings{schnabel2016treatments,
+  author    = {Schnabel, Tobias and Swaminathan, Adith and Singh, Ashudeep and Chandak, Navin and Joachims, Thorsten},
+  title     = {Recommendations as Treatments: Debiasing Learning and Evaluation},
+  booktitle = {ICML}, year = {2016}
+}
+
+@inproceedings{joachims2017unbiased,
+  author    = {Joachims, Thorsten and Swaminathan, Adith and Schnabel, Tobias},
+  title     = {Unbiased Learning-to-Rank with Biased Feedback},
+  booktitle = {WSDM}, year = {2017}
+}
+
+% ---------------------------------------------------------------------------
+% Effect-ordering evaluation (RATE / Qini) + OPE from randomized logs — closest published kin of β̂
+% ---------------------------------------------------------------------------
+@inproceedings{gutierrez2017uplift,
+  author    = {Gutierrez, Pierre and G\'erardy, Jean-Yves},
+  title     = {Causal Inference and Uplift Modelling: A Review of the Literature},
+  booktitle = {Proceedings of the 3rd International Conference on Predictive Applications and APIs},
+  series    = {PMLR}, volume = {67}, pages = {1--13}, year = {2017}
+}
+
+@article{radcliffe2007qini,
+  author  = {Radcliffe, Nicholas J.},
+  title   = {Using Control Groups to Target on Predicted Lift: Building and Assessing Uplift Models},
+  journal = {Direct Marketing Analytics Journal}, pages = {14--21}, year = {2007}
+}
+
+@article{yadlowsky2021rate,
+  author  = {Yadlowsky, Steve and Fleming, Scott and Shah, Nigam and Brunskill, Emma and Wager, Stefan},
+  title   = {Evaluating Treatment Prioritization Rules via Rank-Weighted Average Treatment Effects},
+  journal = {Journal of the American Statistical Association},
+  volume  = {120}, number = {549}, year = {2025}, note = {arXiv:2111.07966}
+}
+
+@article{sverdrup2025qini,
+  author  = {Sverdrup, Erik and Wu, Han and Athey, Susan and Wager, Stefan},
+  title   = {Qini Curves for Multi-Armed Treatment Rules},
+  journal = {Journal of Computational and Graphical Statistics},
+  volume  = {34}, number = {3}, year = {2025}, note = {arXiv:2306.11979}
+}
+
+@article{dahabreh2020extending,
+  author  = {Dahabreh, Issa J. and Robertson, Sarah E. and Steingrimsson, Jon A. and Stuart, Elizabeth A. and Hern{\'a}n, Miguel A.},
+  title   = {Extending Inferences from a Randomized Trial to a New Target Population},
+  journal = {Statistics in Medicine}, volume = {39}, number = {14}, pages = {1999--2014}, year = {2020}
+}
+
+% ---------------------------------------------------------------------------
+% Off-policy / offline evaluation from randomized logging (§2/§6 — established OPE practice)
+% ---------------------------------------------------------------------------
+@inproceedings{gilotte2018offline,
+  author    = {Gilotte, Alexandre and Calauz\`enes, Cl\'ement and Nedelec, Thomas and Abraham, Alexandre and Doll\'e, Simon},
+  title     = {Offline {A/B} Testing for Recommender Systems},
+  booktitle = {WSDM}, year = {2018}
+}
+
+@inproceedings{saito2021openbandit,
+  author    = {Saito, Yuta and Aihara, Shunsuke and Matsutani, Megumi and Narita, Yusuke},
+  title     = {Open Bandit Dataset and Pipeline: Towards Realistic and Reproducible Off-Policy Evaluation},
+  booktitle = {NeurIPS Datasets and Benchmarks}, year = {2021}
+}
+
+% ---------------------------------------------------------------------------
+% Game AI / MOBA draft recommendation  (domain positioning, §1)
+% ---------------------------------------------------------------------------
+@inproceedings{chen2018draftartist,
+  author    = {Chen, Zhengxing and Nguyen, Truong-Huy D. and Xu, Yuyu and Amato, Christopher
+               and Cooper, Seth and Sun, Yizhou and Seif El-Nasr, Magy},
+  title     = {The Art of Drafting: A Team-Oriented Hero Recommendation System for Multiplayer Online Battle Arena Games},
+  booktitle = {Proceedings of the 12th ACM Conference on Recommender Systems (RecSys '18)},
+  pages     = {200--208}, year = {2018}
+}
+
+@inproceedings{summerville2016draft,
+  author    = {Summerville, Adam and Cook, Michael and Steenhuisen, Ben},
+  title     = {Draft-Analysis of the Ancients: Predicting Draft Picks in DotA 2 Using Machine Learning},
+  booktitle = {AIIDE (Experimental AI in Games workshop)}, year = {2016}
+}
+
+@article{chen2021juewu,
+  author  = {Chen, Sheng and Zhu, Menghui and Ye, Deheng and Zhang, Weinan and Fu, Qiang and Yang, Wei},
+  title   = {Which Heroes to Pick? Learning to Draft in {MOBA} Games With Neural Networks and Tree Search},
+  journal = {IEEE Transactions on Games}, volume = {13}, number = {4}, pages = {410--421}, year = {2021}
+}
+
+@article{berner2019dota,
+  author  = {Berner, Christopher and Brockman, Greg and others},
+  title   = {Dota 2 with Large Scale Deep Reinforcement Learning},
+  journal = {arXiv preprint arXiv:1912.06680}, year = {2019}
+}
+
+@inproceedings{lee2022draftrec,
+  author    = {Lee, Hojoon and Hwang, Dongyoon and Kim, Hyunseung and Lee, Byungkun and Choo, Jaegul},
+  title     = {DraftRec: Personalized Draft Recommendation for Winning in Multi-Player Online Battle Arena Games},
+  booktitle = {Proceedings of the ACM Web Conference 2022 (WWW '22)},
+  year      = {2022}, note = {arXiv:2204.12750}
+}

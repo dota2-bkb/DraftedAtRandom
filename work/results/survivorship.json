@@ -1,0 +1,32 @@
+{
+  "leaver_channel_share": 0.05619435607506943,
+  "pop_shift": 0.005961899178539694,
+  "pop_shift_hi": 0.007529684331903837,
+  "pop_shift_incl_leaver": 0.005893803319092622,
+  "pop_shift_incl_leaver_hi": 0.007207081975502573,
+  "pop_shift_incl_leaver_lo": 0.004501969084367107,
+  "pop_shift_lo": 0.004399590489669011,
+  "quintile_obs_exp_clean": [
+    0.9688171726469413,
+    0.9825314575698767,
+    1.0084115035077565,
+    1.0293894056139132,
+    1.1047041344677686
+  ],
+  "quintile_obs_exp_incl_leaver": [
+    0.9692155771268519,
+    0.9847844066847695,
+    1.0049049252483018,
+    1.030519588754215,
+    1.0975191989471331
+  ],
+  "shift_sd": 0.003324695698363738,
+  "shift_sd_hi": 0.005093637778377288,
+  "shift_sd_lo": 0.0015806454062993233,
+  "spread_clean": 1.1402606865953515,
+  "spread_incl_leaver": 1.1323788276294786,
+  "top_forced_hero_1_key": "lina",
+  "top_forced_hero_1_ratio": 1.1843724259872976,
+  "top_forced_hero_2_key": "nevermore",
+  "top_forced_hero_2_ratio": 1.1859462999211907
+}

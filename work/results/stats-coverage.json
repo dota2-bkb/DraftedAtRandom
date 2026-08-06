@@ -1,0 +1,23 @@
+{
+  "d_forced_per_match": 0.32033241227138687,
+  "d_mmr": 6.93349498361431,
+  "d_win": -0.006324830163314532,
+  "farm_pairwise_r": 0.754826625307175,
+  "forced_per_match_parsed": 0.8248348886333859,
+  "forced_per_match_unparsed": 0.5045024763619991,
+  "n_analytic": 79240,
+  "n_parsed": 74798,
+  "n_translation_picks": 12310,
+  "n_unparsed": 4442,
+  "pc1_share": 0.609954551822221,
+  "r_comp_combat": 0.9049556110074242,
+  "r_comp_farm": 0.9358539655547371,
+  "sd_composite": 4.577738507156611,
+  "sd_win": 0.4963039892261088,
+  "t_forced_per_match": 23.31522612857257,
+  "t_mmr": 6.239329755127154,
+  "unparsed_forced_share": 0.03505012746922752,
+  "unparsed_share": 0.056057546693589096,
+  "win_rate": 0.43931762794476037,
+  "z_win": -0.8215598766759671
+}

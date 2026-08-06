@@ -1,0 +1,1784 @@
+{
+"ability_id_to_name": {
+"10368": "faceless_void_time_lock",
+"1984": "primal_beast_onslaught",
+"10370": "faceless_void_chronosphere",
+"1988": "primal_beast_trample",
+"2628": "bounty_hunter_shuriken_toss",
+"1990": "primal_beast_uproar",
+"1992": "primal_beast_pulverize",
+"10572": "bounty_hunter_jinada",
+"10574": "bounty_hunter_wind_walk",
+"10576": "bounty_hunter_track",
+"10452": "dragon_knight_breathe_fire",
+"10196": "storm_spirit_static_remnant",
+"10454": "dragon_knight_dragon_tail",
+"10198": "storm_spirit_electric_vortex",
+"10200": "storm_spirit_overload",
+"10202": "storm_spirit_ball_lightning",
+"10458": "dragon_knight_elder_dragon_form",
+"11098": "bristleback_quill_spray",
+"11100": "bristleback_bristleback",
+"2784": "elder_titan_ancestral_spirit",
+"10276": "witch_doctor_paralyzing_cask",
+"12964": "snapfire_mortimer_kisses",
+"10022": "bane_brain_sap",
+"12966": "snapfire_firesnap_cookie",
+"10280": "witch_doctor_maledict",
+"10024": "bane_enfeeble",
+"10282": "witch_doctor_death_ward",
+"11178": "elder_titan_echo_stomp",
+"10026": "bane_fiends_grip",
+"10028": "bane_nightmare",
+"12976": "snapfire_lil_shredder",
+"3504": "dragon_knight_wyrms_wrath",
+"11186": "elder_titan_natural_order",
+"10482": "leshrac_split_earth",
+"10484": "leshrac_diabolic_edict",
+"11188": "elder_titan_earth_splitter",
+"10292": "enigma_malefice",
+"11382": "faceless_void_time_dilation",
+"10488": "leshrac_pulse_nova",
+"10364": "faceless_void_time_walk",
+"10240": "tidehunter_anchor_smash",
+"10754": "silencer_curse_of_the_silent",
+"10242": "tidehunter_ravage",
+"10756": "silencer_glaives_of_wisdom",
+"10694": "ancient_apparition_chilling_touch",
+"10758": "silencer_last_word",
+"10696": "ancient_apparition_ice_blast",
+"10760": "silencer_global_silence",
+"10706": "spirit_breaker_charge_of_darkness",
+"10388": "templar_assassin_refraction",
+"16212": "hoodwink_sharpshooter",
+"10710": "spirit_breaker_greater_bash",
+"10390": "templar_assassin_meld",
+"10392": "templar_assassin_psi_blades",
+"3034": "kez_falcon_rush_ad",
+"16858": "hoodwink_acorn_shot",
+"10014": "axe_berserkers_call",
+"3038": "kez_shodo_sai_ad",
+"11102": "bristleback_warpath",
+"10016": "axe_battle_hunger",
+"10018": "axe_counter_helix",
+"10020": "axe_culling_blade",
+"10668": "spectre_spectral_dagger",
+"10672": "spectre_dispersion",
+"10544": "huskar_burning_spear",
+"10546": "huskar_berserkers_blood",
+"10674": "spectre_haunt",
+"10548": "huskar_life_break",
+"2998": "kez_grappling_claw",
+"3002": "kez_raptor_dance",
+"19002": "hoodwink_scurry",
+"10236": "tidehunter_gush",
+"16316": "hoodwink_bushwhack",
+"10238": "tidehunter_kraken_shell",
+"10176": "skeleton_king_mortal_strike",
+"10880": "ogre_magi_bloodlust",
+"10178": "skeleton_king_reincarnation",
+"10884": "undying_decay",
+"12678": "dark_willow_bramble_maze",
+"10888": "undying_tombstone",
+"12682": "dark_willow_shadow_realm",
+"11020": "troll_warlord_whirling_axes_melee",
+"10252": "crystal_maiden_crystal_nova",
+"10254": "crystal_maiden_frostbite",
+"10894": "undying_flesh_golem",
+"11022": "troll_warlord_fervor",
+"12686": "pangolier_gyroshell",
+"12688": "pangolier_swashbuckle",
+"11024": "troll_warlord_battle_trance",
+"10258": "crystal_maiden_freezing_field",
+"14614": "pangolier_lucky_shot",
+"10266": "windrunner_focusfire",
+"11354": "arc_warden_flux",
+"10714": "ursa_earthshock",
+"11356": "arc_warden_magnetic_field",
+"11048": "shredder_whirling_death",
+"10730": "alchemist_acid_spray",
+"11050": "shredder_timber_chain",
+"11052": "shredder_reactive_armor",
+"10732": "alchemist_unstable_concoction",
+"11246": "phoenix_icarus_dive",
+"11054": "shredder_chakram",
+"10738": "alchemist_chemical_rage",
+"11252": "phoenix_sun_ray",
+"2232": "alchemist_corrosive_weaponry",
+"12922": "pangolier_shield_crash",
+"11260": "phoenix_supernova",
+"10876": "ogre_magi_fireblast",
+"10172": "skeleton_king_hellfire_blast",
+"2240": "clinkz_strafe",
+"10006": "antimage_mana_break",
+"10008": "antimage_blink",
+"10520": "clinkz_searing_arrows",
+"10522": "clinkz_wind_walk",
+"10524": "clinkz_death_pact",
+"3100": "dazzle_nothl_projection",
+"10336": "beastmaster_wild_axes",
+"2208": "nyx_assassin_jolt",
+"10656": "chen_penitence",
+"10466": "dazzle_poison_touch",
+"14628": "antimage_counterspell",
+"10468": "dazzle_shallow_grave",
+"10470": "dazzle_shadow_wave",
+"10662": "chen_hand_of_god",
+"10924": "nyx_assassin_impale",
+"10286": "riki_blink_strike",
+"10288": "riki_backstab",
+"10928": "nyx_assassin_spiked_carapace",
+"10930": "nyx_assassin_vendetta",
+"10354": "beastmaster_primal_roar",
+"10290": "riki_tricks_of_the_trade",
+"3318": "largo_catchy_lick",
+"10294": "enigma_demonic_conversion",
+"3320": "largo_frogstomp",
+"10296": "enigma_midnight_pulse",
+"10298": "enigma_black_hole",
+"3322": "largo_croak_of_genius",
+"14462": "beastmaster_summon_raptor",
+"2432": "nevermore_frenzy",
+"15812": "dawnbreaker_solar_guardian",
+"11206": "ember_spirit_searing_chains",
+"11208": "ember_spirit_sleight_of_fist",
+"10120": "nevermore_shadowraze2",
+"11210": "ember_spirit_flame_guard",
+"10188": "sven_storm_bolt",
+"11212": "ember_spirit_fire_remnant",
+"10190": "sven_great_cleave",
+"10126": "nevermore_dark_lord",
+"10128": "nevermore_requiem",
+"11218": "earth_spirit_rolling_boulder",
+"10194": "sven_gods_strength",
+"10324": "warlock_fatal_bonds",
+"15828": "dawnbreaker_celestial_hammer",
+"10326": "warlock_shadow_word",
+"10328": "warlock_upheaval",
+"10330": "warlock_rain_of_chaos",
+"15836": "dawnbreaker_luminosity",
+"10012": "antimage_mana_void",
+"10474": "rattletrap_battery_assault",
+"10476": "rattletrap_power_cogs",
+"10990": "slark_pounce",
+"10480": "rattletrap_hookshot",
+"10994": "slark_shadow_dance",
+"15804": "dawnbreaker_fire_wreath",
+"16384": "marci_grapple",
+"11202": "techies_suicide",
+"11274": "oracle_fortunes_end",
+"2634": "jakiro_liquid_ice",
+"16396": "marci_unleash",
+"11276": "oracle_fates_edict",
+"12684": "dark_willow_cursed_crown",
+"10062": "kunkka_torrent",
+"10064": "kunkka_tidebringer",
+"11280": "oracle_false_promise",
+"10066": "kunkka_x_marks_the_spot",
+"10070": "kunkka_ghostship",
+"16470": "marci_companion_run",
+"3040": "kez_ravens_veil_ad",
+"10596": "jakiro_ice_path",
+"11302": "winter_wyvern_arctic_burn",
+"2854": "marci_bodyguard",
+"10600": "jakiro_macropyre",
+"11304": "winter_wyvern_splinter_blast",
+"11306": "winter_wyvern_cold_embrace",
+"10346": "queenofpain_shadow_strike",
+"10348": "queenofpain_blink",
+"11308": "winter_wyvern_winters_curse",
+"1772": "techies_reactive_tazer",
+"10350": "queenofpain_scream_of_pain",
+"10352": "queenofpain_sonic_wave",
+"10096": "mirana_arrow",
+"10100": "mirana_leap",
+"11190": "legion_commander_overwhelming_odds",
+"3000": "kez_kazurai_katana",
+"11192": "legion_commander_press_the_attack",
+"11194": "legion_commander_moment_of_courage",
+"11196": "legion_commander_duel",
+"11198": "techies_land_mines",
+"16000": "grimstroke_dark_artistry",
+"10244": "vengefulspirit_magic_missile",
+"10246": "vengefulspirit_command_aura",
+"2442": "phantom_lancer_phantom_edge",
+"10250": "vengefulspirit_nether_swap",
+"16012": "grimstroke_ink_creature",
+"16014": "grimstroke_spirit_walk",
+"10830": "lone_druid_true_form",
+"10132": "phantom_lancer_doppelwalk",
+"10134": "phantom_lancer_juxtapose",
+"14618": "lone_druid_spirit_link",
+"11036": "magnataur_shockwave",
+"11038": "magnataur_empower",
+"11040": "magnataur_skewer",
+"11042": "magnataur_reverse_polarity",
+"10150": "pudge_meat_hook",
+"10152": "pudge_rot",
+"10088": "lion_impale",
+"3368": "lone_druid_entangle",
+"10090": "lion_voodoo",
+"10092": "lion_mana_drain",
+"10094": "lion_finger_of_death",
+"13166": "mars_spear",
+"12982": "grimstroke_soul_chain",
+"12990": "mars_gods_rebuke",
+"10496": "furion_wrath_of_nature",
+"10180": "death_prophet_carrion_swarm",
+"10186": "death_prophet_exorcism",
+"2832": "mars_arena_of_blood",
+"2448": "razor_storm_surge",
+"10962": "visage_soul_assumption",
+"10964": "visage_gravekeepers_cloak",
+"11162": "skywrath_mage_arcane_bolt",
+"11164": "skywrath_mage_concussive_shot",
+"11168": "skywrath_mage_mystic_flare",
+"10724": "gyrocopter_homing_missile",
+"10726": "gyrocopter_flak_cannon",
+"10534": "enchantress_untouchable",
+"10728": "gyrocopter_call_down",
+"10536": "enchantress_enchant",
+"11370": "death_prophet_spirit_siphon",
+"10538": "enchantress_natures_attendants",
+"10540": "enchantress_impetus",
+"13164": "mars_bulwark",
+"10164": "razor_plasma_field",
+"10166": "razor_static_link",
+"10038": "drow_ranger_frost_arrows",
+"10934": "naga_siren_mirror_image",
+"10936": "naga_siren_ensnare",
+"10104": "morphling_waveform",
+"10938": "naga_siren_rip_tide",
+"10170": "razor_eye_of_the_storm",
+"10490": "furion_sprout",
+"10492": "furion_teleportation",
+"10044": "drow_ranger_marksmanship",
+"10940": "naga_siren_song_of_the_siren",
+"10048": "earthshaker_enchant_totem",
+"10050": "earthshaker_aftershock",
+"15686": "invoker_chaos_meteor_ad",
+"15688": "invoker_ice_wall_ad",
+"11028": "centaur_hoof_stomp",
+"11030": "centaur_double_edge",
+"11032": "centaur_return",
+"10394": "templar_assassin_psionic_trap",
+"11034": "centaur_stampede",
+"10716": "ursa_overpower",
+"10718": "ursa_fury_swipes",
+"10720": "ursa_enrage",
+"10212": "tiny_avalanche",
+"10916": "disruptor_thunder_strike",
+"676": "treant_natures_grasp",
+"10918": "disruptor_glimpse",
+"10214": "tiny_toss",
+"10216": "tiny_tree_grab",
+"11432": "monkey_king_boundless_strike",
+"10922": "disruptor_static_storm",
+"10218": "tiny_grow",
+"11508": "muerta_pierce_the_veil",
+"11446": "monkey_king_jingu_mastery",
+"10870": "treant_leech_seed",
+"11450": "monkey_king_wukongs_command",
+"10874": "treant_overgrowth",
+"10494": "furion_force_of_nature",
+"10046": "earthshaker_fissure",
+"10690": "ancient_apparition_cold_feet",
+"10192": "sven_warcry",
+"10970": "wisp_tether",
+"10972": "wisp_spirits",
+"10974": "wisp_overcharge",
+"3358": "spectre_shadow_step",
+"11172": "abaddon_aphotic_shield",
+"11174": "abaddon_frostmourne",
+"11238": "terrorblade_reflection",
+"11240": "terrorblade_conjure_image",
+"11176": "abaddon_borrowed_time",
+"11242": "terrorblade_metamorphosis",
+"10860": "meepo_earthbind",
+"11244": "terrorblade_sunder",
+"10560": "broodmother_spin_web",
+"11264": "drow_ranger_wave_of_silence",
+"10562": "broodmother_incapacitating_bite",
+"1282": "zuus_heavenly_jump",
+"10436": "viper_poison_attack",
+"10564": "broodmother_insatiable_hunger",
+"10438": "viper_nethertoxin",
+"10440": "viper_corrosive_skin",
+"10442": "viper_viper_strike",
+"10640": "batrider_sticky_napalm",
+"10644": "batrider_firefly",
+"12960": "snapfire_scatterblast",
+"10220": "zuus_arc_lightning",
+"10222": "zuus_lightning_bolt",
+"10226": "zuus_thundergods_wrath",
+"10228": "slardar_sprint",
+"10678": "doom_bringer_devour",
+"10230": "slardar_slithereen_crush",
+"10232": "slardar_bash",
+"10680": "doom_bringer_scorched_earth",
+"10682": "doom_bringer_infernal_blade",
+"10234": "slardar_amplify_damage",
+"10684": "doom_bringer_doom",
+"10558": "broodmother_spawn_spiderlings",
+"704": "ringmaster_tame_the_beasts",
+"10306": "tinker_rearm",
+"3036": "kez_talon_toss_ad",
+"1758": "techies_sticky_bomb",
+"3488": "tinker_deploy_turrets",
+"10478": "rattletrap_rocket_flare",
+"2996": "kez_echo_slash",
+"10102": "mirana_starfall",
+"10300": "tinker_laser",
+"766": "ringmaster_the_box",
+"10204": "sandking_burrowstrike",
+"10206": "sandking_sand_storm",
+"10210": "sandking_epicenter",
+"10988": "slark_dark_pact",
+"14636": "meepo_ransack",
+"3386": "slark_saltwater_shiv",
+"11008": "medusa_split_shot",
+"11010": "medusa_mystic_snake",
+"10692": "ancient_apparition_ice_vortex",
+"11014": "medusa_stone_gaze",
+"14600": "huskar_inner_fire",
+"10444": "luna_lucent_beam",
+"10446": "luna_moon_glaive",
+"2458": "sandking_scorpion_strike",
+"11166": "skywrath_mage_ancient_seal",
+"2210": "venomancer_noxious_plague",
+"2924": "luna_lunar_orbit",
+"10356": "venomancer_venomous_gale",
+"10360": "venomancer_plague_ward",
+"15682": "invoker_sun_strike_ad",
+"10054": "juggernaut_blade_dance",
+"10056": "juggernaut_blade_fury",
+"15690": "invoker_deafening_blast_ad",
+"10060": "juggernaut_omni_slash",
+"12940": "void_spirit_dissimilate",
+"10260": "windrunner_shackleshot",
+"10262": "windrunner_powershot",
+"10264": "windrunner_windrun",
+"10852": "chaos_knight_chaos_bolt",
+"10148": "pudge_flesh_heap",
+"10854": "chaos_knight_reality_rift",
+"10856": "chaos_knight_chaos_strike",
+"16680": "dark_willow_terrorize",
+"10858": "chaos_knight_phantasm",
+"10154": "pudge_dismember",
+"15410": "void_spirit_astral_step",
+"15674": "invoker_ghost_walk_ad",
+"15420": "void_spirit_resonant_pulse",
+"11136": "tusk_walrus_punch",
+"10142": "puck_waning_rift",
+"10144": "puck_phase_shift",
+"10146": "puck_dream_coil",
+"10156": "shadow_shaman_ether_shock",
+"10158": "shadow_shaman_voodoo",
+"10160": "shadow_shaman_shackles",
+"14644": "tusk_tag_team",
+"10552": "night_stalker_crippling_fear",
+"11130": "tusk_ice_shards",
+"11132": "tusk_snowball",
+"10556": "night_stalker_darkness",
+"10182": "death_prophet_silence",
+"11442": "monkey_king_tree_dance",
+"10872": "treant_living_armor",
+"10380": "phantom_assassin_stifling_dagger",
+"10382": "phantom_assassin_phantom_strike",
+"2574": "phantom_assassin_immaterial",
+"10386": "phantom_assassin_coup_de_grace",
+"11224": "earth_spirit_magnetize",
+"11250": "phoenix_fire_spirits",
+"3498": "venomancer_snakebite",
+"10372": "pugna_nether_blast",
+"10376": "pugna_nether_ward",
+"10378": "pugna_life_drain",
+"10162": "shadow_shaman_mass_serpent_ward",
+"10450": "luna_eclipse",
+"11226": "abyssal_underlord_firestorm",
+"11228": "abyssal_underlord_pit_of_malice",
+"11230": "abyssal_underlord_atrophy_aura",
+"10792": "lycan_howl",
+"10794": "lycan_feral_impulse",
+"10796": "lycan_shapeshift",
+"10248": "vengefulspirit_wave_of_terror",
+"10272": "lich_frost_shield",
+"10274": "lich_chain_frost",
+"686": "drow_ranger_multishot",
+"14650": "lich_sinister_gaze",
+"10052": "earthshaker_echo_slam",
+"10268": "lich_frost_nova",
+"11170": "abaddon_death_coil",
+"10030": "bloodseeker_bloodrage",
+"10034": "bloodseeker_thirst",
+"10036": "bloodseeker_rupture",
+"11502": "muerta_dead_shot",
+"11504": "muerta_the_calling",
+"11506": "muerta_gunslinger",
+"10782": "obsidian_destroyer_arcane_orb",
+"10976": "wisp_relocate",
+"10722": "gyrocopter_rocket_barrage",
+"2426": "mirana_invis",
+"10878": "ogre_magi_ignite",
+"10498": "life_stealer_rage",
+"10500": "life_stealer_feast",
+"10502": "life_stealer_open_wounds",
+"10504": "life_stealer_infest",
+"10598": "jakiro_liquid_fire",
+"10790": "lycan_summon_wolves",
+"2950": "medusa_gorgon_grasp",
+"10646": "batrider_flaming_lasso",
+"10316": "necrolyte_death_pulse",
+"10318": "necrolyte_heartstopper_aura",
+"10322": "necrolyte_reapers_scythe",
+"2002": "shadow_demon_disseminate",
+"10842": "shadow_demon_disruption",
+"14620": "brewmaster_cinder_brew",
+"10850": "shadow_demon_demonic_purge",
+"10800": "brewmaster_thunder_clap",
+"10804": "brewmaster_drunken_brawler",
+"10806": "brewmaster_primal_split",
+"14602": "spirit_breaker_bulldoze",
+"10580": "weaver_shukuchi",
+"10582": "weaver_geminate_attack",
+"10584": "weaver_time_lapse",
+"10712": "spirit_breaker_nether_strike",
+"10526": "omniknight_purification",
+"1312": "omniknight_hammer_of_purity",
+"10106": "morphling_adaptive_strike_agi",
+"1790": "omniknight_martyr",
+"10512": "dark_seer_ion_shell",
+"10514": "dark_seer_surge",
+"10516": "dark_seer_wall_of_replica",
+"10138": "puck_illusory_orb",
+"10594": "jakiro_dual_breath",
+"10374": "pugna_decrepify",
+"10058": "juggernaut_healing_ward",
+"10080": "lina_dragon_slave",
+"10082": "lina_light_strike_array",
+"10084": "lina_fiery_soul",
+"10086": "lina_laguna_blade",
+"10900": "rubick_fade_bolt",
+"14640": "rubick_arcane_supremacy",
+"10032": "bloodseeker_blood_bath",
+"15402": "void_spirit_aether_remnant",
+"10960": "visage_grave_chill",
+"10966": "visage_summon_familiars",
+"10946": "keeper_of_the_light_chakra_magic",
+"10948": "keeper_of_the_light_spirit_form",
+"772": "ringmaster_impalement",
+"10550": "night_stalker_void",
+"770": "ringmaster_wheel",
+"2540": "necrolyte_ghost_shroud",
+"11278": "oracle_purifying_flames",
+"10532": "omniknight_guardian_angel",
+"10920": "disruptor_kinetic_field",
+"10308": "sniper_shrapnel",
+"10310": "sniper_headshot",
+"10312": "sniper_take_aim",
+"10314": "sniper_assassinate",
+"10278": "witch_doctor_voodoo_restoration",
+"10284": "riki_smoke_screen",
+"15680": "invoker_alacrity_ad",
+"10130": "phantom_lancer_spirit_lance",
+"11358": "arc_warden_spark_wraith",
+"10942": "keeper_of_the_light_illuminate",
+"10846": "shadow_demon_shadow_poison",
+"1730": "abyssal_underlord_dark_portal",
+"10896": "rubick_telekinesis",
+"11216": "earth_spirit_boulder_smash",
+"11220": "earth_spirit_geomagnetic_grip",
+"10578": "weaver_the_swarm",
+"10486": "leshrac_lightning_storm",
+"10784": "obsidian_destroyer_astral_imprisonment",
+"10788": "obsidian_destroyer_sanity_eclipse",
+"10886": "undying_soul_rip",
+"10304": "tinker_march_of_the_machines",
+"10952": "keeper_of_the_light_blinding_light",
+"10828": "lone_druid_savage_roar",
+"10660": "chen_holy_persuasion",
+"11018": "troll_warlord_whirling_axes_ranged",
+"10510": "dark_seer_vacuum",
+"10642": "batrider_flamebreak",
+"15678": "invoker_emp_ad",
+"15672": "invoker_cold_snap_ad",
+"11096": "bristleback_viscous_nasal_goo",
+"15676": "invoker_tornado_ad",
+"14460": "beastmaster_summon_razorback",
+"15684": "invoker_forge_spirit_ad",
+"3324": "largo_amphibian_rhapsody",
+"14612": "chen_divine_favor",
+"10862": "meepo_poof"
+},
+"hero_id_to_name": {
+"128": "snapfire",
+"17": "storm_spirit",
+"137": "primal_beast",
+"99": "bristleback",
+"52": "leshrac",
+"30": "witch_doctor",
+"49": "dragon_knight",
+"41": "faceless_void",
+"62": "bounty_hunter",
+"103": "elder_titan",
+"68": "ancient_apparition",
+"75": "silencer",
+"67": "spectre",
+"123": "hoodwink",
+"59": "huskar",
+"46": "templar_assassin",
+"2": "axe",
+"71": "spirit_breaker",
+"145": "kez",
+"84": "ogre_magi",
+"113": "arc_warden",
+"73": "alchemist",
+"95": "troll_warlord",
+"42": "skeleton_king",
+"119": "dark_willow",
+"85": "undying",
+"5": "crystal_maiden",
+"110": "phoenix",
+"50": "dazzle",
+"56": "clinkz",
+"38": "beastmaster",
+"66": "chen",
+"88": "nyx_assassin",
+"33": "enigma",
+"32": "riki",
+"11": "nevermore",
+"51": "rattletrap",
+"37": "warlock",
+"29": "tidehunter",
+"93": "slark",
+"106": "ember_spirit",
+"1": "antimage",
+"135": "dawnbreaker",
+"39": "queenofpain",
+"64": "jakiro",
+"9": "mirana",
+"105": "techies",
+"112": "winter_wyvern",
+"104": "legion_commander",
+"23": "kunkka",
+"111": "oracle",
+"20": "vengefulspirit",
+"14": "pudge",
+"26": "lion",
+"121": "grimstroke",
+"97": "magnataur",
+"12": "phantom_lancer",
+"43": "death_prophet",
+"10": "morphling",
+"53": "furion",
+"92": "visage",
+"15": "razor",
+"72": "gyrocopter",
+"129": "mars",
+"89": "naga_siren",
+"101": "skywrath_mage",
+"74": "invoker",
+"83": "treant",
+"114": "monkey_king",
+"7": "earthshaker",
+"96": "centaur",
+"87": "disruptor",
+"70": "ursa",
+"18": "sven",
+"109": "terrorblade",
+"91": "wisp",
+"98": "shredder",
+"155": "largo",
+"6": "drow_ranger",
+"47": "viper",
+"65": "batrider",
+"22": "zuus",
+"69": "doom_bringer",
+"80": "lone_druid",
+"34": "tinker",
+"131": "ringmaster",
+"16": "sand_king",
+"94": "medusa",
+"40": "venomancer",
+"48": "luna",
+"8": "juggernaut",
+"21": "windrunner",
+"3": "bane",
+"107": "earth_spirit",
+"126": "void_spirit",
+"60": "night_stalker",
+"13": "puck",
+"27": "shadow_shaman",
+"19": "tiny",
+"81": "chaos_knight",
+"102": "abaddon",
+"45": "pugna",
+"100": "tusk",
+"44": "phantom_assassin",
+"31": "lich",
+"4": "bloodseeker",
+"138": "muerta",
+"76": "obsidian_destroyer",
+"54": "life_stealer",
+"77": "lycan",
+"36": "necrolyte",
+"120": "pangolier",
+"79": "shadow_demon",
+"78": "brewmaster",
+"57": "omniknight",
+"136": "marci",
+"58": "enchantress",
+"55": "dark_seer",
+"61": "broodmother",
+"25": "lina",
+"86": "rubick",
+"90": "keeper_of_the_light",
+"108": "abyssal_underlord",
+"28": "slardar",
+"82": "meepo",
+"35": "sniper",
+"63": "weaver"
+},
+"ult_ids": [
+770,
+1730,
+1992,
+2210,
+2426,
+2832,
+3002,
+3040,
+3100,
+3324,
+10012,
+10020,
+10026,
+10036,
+10044,
+10052,
+10060,
+10070,
+10086,
+10094,
+10128,
+10134,
+10146,
+10154,
+10162,
+10170,
+10178,
+10186,
+10194,
+10202,
+10210,
+10218,
+10226,
+10234,
+10242,
+10250,
+10258,
+10266,
+10274,
+10282,
+10288,
+10298,
+10306,
+10314,
+10322,
+10330,
+10352,
+10354,
+10370,
+10378,
+10386,
+10394,
+10442,
+10450,
+10458,
+10480,
+10488,
+10496,
+10504,
+10516,
+10522,
+10532,
+10534,
+10548,
+10556,
+10558,
+10576,
+10584,
+10600,
+10646,
+10662,
+10674,
+10684,
+10696,
+10712,
+10720,
+10728,
+10738,
+10760,
+10788,
+10796,
+10806,
+10830,
+10850,
+10858,
+10874,
+10894,
+10922,
+10930,
+10940,
+10948,
+10966,
+10976,
+10994,
+11014,
+11024,
+11034,
+11042,
+11054,
+11102,
+11136,
+11168,
+11176,
+11188,
+11196,
+11198,
+11212,
+11224,
+11244,
+11260,
+11280,
+11308,
+11450,
+11508,
+12686,
+12964,
+12982,
+15410,
+15812,
+16212,
+16396,
+16680
+],
+"hero_abilities": {
+"30": {
+"basics": [
+10276,
+10278,
+10280
+],
+"ult": 10282
+},
+"41": {
+"basics": [
+10364,
+11382,
+10368
+],
+"ult": 10370
+},
+"99": {
+"basics": [
+11096,
+11098,
+11100
+],
+"ult": 11102
+},
+"3": {
+"basics": [
+10024,
+10022,
+10028
+],
+"ult": 10026
+},
+"103": {
+"basics": [
+11178,
+2784,
+11186
+],
+"ult": 11188
+},
+"33": {
+"basics": [
+10292,
+10294,
+10296
+],
+"ult": 10298
+},
+"52": {
+"basics": [
+10482,
+10484,
+10486
+],
+"ult": 10488
+},
+"49": {
+"basics": [
+10452,
+10454,
+3504
+],
+"ult": 10458
+},
+"128": {
+"basics": [
+12960,
+12966,
+12976
+],
+"ult": 12964
+},
+"17": {
+"basics": [
+10196,
+10198,
+10200
+],
+"ult": 10202
+},
+"62": {
+"basics": [
+2628,
+10572,
+10574
+],
+"ult": 10576
+},
+"137": {
+"basics": [
+1984,
+1988,
+1990
+],
+"ult": 1992
+},
+"59": {
+"basics": [
+14600,
+10544,
+10546
+],
+"ult": 10548
+},
+"75": {
+"basics": [
+10754,
+10756,
+10758
+],
+"ult": 10760
+},
+"71": {
+"basics": [
+10706,
+14602,
+10710
+],
+"ult": 10712
+},
+"68": {
+"basics": [
+10690,
+10692,
+10694
+],
+"ult": 10696
+},
+"29": {
+"basics": [
+10236,
+10238,
+10240
+],
+"ult": 10242
+},
+"67": {
+"basics": [
+10668,
+3358,
+10672
+],
+"ult": 10674
+},
+"123": {
+"basics": [
+16858,
+16316,
+19002
+],
+"ult": 16212
+},
+"46": {
+"basics": [
+10388,
+10390,
+10392
+],
+"ult": 10394
+},
+"145": {
+"basics": [
+2996,
+3038,
+3036
+],
+"ult": 3040
+},
+"2": {
+"basics": [
+10014,
+10016,
+10018
+],
+"ult": 10020
+},
+"119": {
+"basics": [
+12678,
+12682,
+12684
+],
+"ult": 16680
+},
+"73": {
+"basics": [
+10730,
+10732,
+2232
+],
+"ult": 10738
+},
+"5": {
+"basics": [
+10252,
+10254,
+10550
+],
+"ult": 10258
+},
+"85": {
+"basics": [
+10884,
+10886,
+10888
+],
+"ult": 10894
+},
+"84": {
+"basics": [
+10876,
+10878,
+10880
+],
+"ult": 16680
+},
+"42": {
+"basics": [
+10172,
+10176,
+10552
+],
+"ult": 10178
+},
+"95": {
+"basics": [
+11022,
+11018,
+11020
+],
+"ult": 11024
+},
+"98": {
+"basics": [
+11048,
+11050,
+11052
+],
+"ult": 11054
+},
+"120": {
+"basics": [
+12688,
+12922,
+14614
+],
+"ult": 12686
+},
+"110": {
+"basics": [
+11246,
+11250,
+11252
+],
+"ult": 11260
+},
+"113": {
+"basics": [
+11354,
+11356,
+11358
+],
+"ult": 11136
+},
+"1": {
+"basics": [
+10006,
+10008,
+14628
+],
+"ult": 10012
+},
+"32": {
+"basics": [
+10284,
+10286,
+10290
+],
+"ult": 10288
+},
+"50": {
+"basics": [
+10466,
+10468,
+10470
+],
+"ult": 3100
+},
+"66": {
+"basics": [
+10656,
+14612,
+10660
+],
+"ult": 10662
+},
+"88": {
+"basics": [
+10924,
+2208,
+10928
+],
+"ult": 10930
+},
+"155": {
+"basics": [
+3318,
+3320,
+3322
+],
+"ult": 3324
+},
+"56": {
+"basics": [
+2240,
+10520,
+10524
+],
+"ult": 10522
+},
+"38": {
+"basics": [
+10336,
+14460,
+14462
+],
+"ult": 10354
+},
+"135": {
+"basics": [
+15804,
+15828,
+15836
+],
+"ult": 15812
+},
+"11": {
+"basics": [
+10120,
+2432,
+10126
+],
+"ult": 10128
+},
+"51": {
+"basics": [
+10474,
+10476,
+10478
+],
+"ult": 10480
+},
+"18": {
+"basics": [
+10188,
+10190,
+10192
+],
+"ult": 10194
+},
+"107": {
+"basics": [
+11216,
+11218,
+11220
+],
+"ult": 11224
+},
+"93": {
+"basics": [
+10988,
+10990,
+3386
+],
+"ult": 10994
+},
+"106": {
+"basics": [
+11206,
+11208,
+11210
+],
+"ult": 11212
+},
+"37": {
+"basics": [
+10324,
+10326,
+10328
+],
+"ult": 10330
+},
+"9": {
+"basics": [
+10102,
+10096,
+10100
+],
+"ult": 2426
+},
+"104": {
+"basics": [
+11190,
+11192,
+11194
+],
+"ult": 11196
+},
+"39": {
+"basics": [
+10346,
+10348,
+10350
+],
+"ult": 10352
+},
+"23": {
+"basics": [
+10062,
+10064,
+10066
+],
+"ult": 10070
+},
+"64": {
+"basics": [
+10594,
+10596,
+2634
+],
+"ult": 10600
+},
+"136": {
+"basics": [
+16384,
+16470,
+2854
+],
+"ult": 16396
+},
+"111": {
+"basics": [
+11274,
+11276,
+11278
+],
+"ult": 11280
+},
+"112": {
+"basics": [
+11302,
+11304,
+11306
+],
+"ult": 11308
+},
+"105": {
+"basics": [
+1758,
+1772,
+11202
+],
+"ult": 11198
+},
+"129": {
+"basics": [
+13166,
+12990,
+13164
+],
+"ult": 2832
+},
+"12": {
+"basics": [
+10130,
+10132,
+2442
+],
+"ult": 10134
+},
+"20": {
+"basics": [
+10244,
+10248,
+10246
+],
+"ult": 10250
+},
+"97": {
+"basics": [
+11036,
+11038,
+11040
+],
+"ult": 11042
+},
+"14": {
+"basics": [
+10150,
+10152,
+10148
+],
+"ult": 10154
+},
+"26": {
+"basics": [
+10088,
+10090,
+10092
+],
+"ult": 10094
+},
+"121": {
+"basics": [
+16000,
+16012,
+16014
+],
+"ult": 12982
+},
+"80": {
+"basics": [
+3368,
+14618,
+10828
+],
+"ult": 10830
+},
+"92": {
+"basics": [
+10960,
+10962,
+10964
+],
+"ult": 10966
+},
+"53": {
+"basics": [
+10490,
+10492,
+10494
+],
+"ult": 10496
+},
+"89": {
+"basics": [
+10934,
+10936,
+10938
+],
+"ult": 10940
+},
+"101": {
+"basics": [
+11162,
+11164,
+11166
+],
+"ult": 11168
+},
+"15": {
+"basics": [
+10164,
+10166,
+2448
+],
+"ult": 10170
+},
+"10": {
+"basics": [
+10104,
+10106,
+10782
+],
+"ult": 11244
+},
+"72": {
+"basics": [
+10722,
+10724,
+10726
+],
+"ult": 10728
+},
+"43": {
+"basics": [
+10180,
+10182,
+11370
+],
+"ult": 10186
+},
+"58": {
+"basics": [
+10540,
+10536,
+10538
+],
+"ult": 10534
+},
+"87": {
+"basics": [
+10916,
+10918,
+10920
+],
+"ult": 10922
+},
+"83": {
+"basics": [
+676,
+10870,
+10872
+],
+"ult": 10874
+},
+"74": {
+"basics": [
+15688,
+15682,
+15676
+],
+"ult": 10646
+},
+"7": {
+"basics": [
+10046,
+10048,
+10050
+],
+"ult": 10052
+},
+"96": {
+"basics": [
+11028,
+11030,
+11032
+],
+"ult": 11034
+},
+"70": {
+"basics": [
+10714,
+10716,
+10718
+],
+"ult": 10720
+},
+"114": {
+"basics": [
+11432,
+11442,
+11446
+],
+"ult": 11450
+},
+"19": {
+"basics": [
+10212,
+10214,
+10216
+],
+"ult": 10218
+},
+"82": {
+"basics": [
+10860,
+10862,
+14636
+],
+"ult": 10210
+},
+"109": {
+"basics": [
+11238,
+11240,
+11242
+],
+"ult": 11244
+},
+"91": {
+"basics": [
+10970,
+10972,
+10974
+],
+"ult": 10976
+},
+"102": {
+"basics": [
+11170,
+11172,
+11174
+],
+"ult": 11176
+},
+"47": {
+"basics": [
+10436,
+10438,
+10440
+],
+"ult": 10442
+},
+"28": {
+"basics": [
+10228,
+10230,
+10232
+],
+"ult": 10234
+},
+"6": {
+"basics": [
+10038,
+11264,
+686
+],
+"ult": 10044
+},
+"61": {
+"basics": [
+10564,
+10560,
+10562
+],
+"ult": 10558
+},
+"22": {
+"basics": [
+10220,
+10222,
+1282
+],
+"ult": 10226
+},
+"69": {
+"basics": [
+10678,
+10680,
+10682
+],
+"ult": 10684
+},
+"65": {
+"basics": [
+10640,
+10642,
+10644
+],
+"ult": 10646
+},
+"34": {
+"basics": [
+10300,
+10304,
+3488
+],
+"ult": 10306
+},
+"131": {
+"basics": [
+704,
+766,
+772
+],
+"ult": 770
+},
+"16": {
+"basics": [
+10204,
+10206,
+2458
+],
+"ult": 10210
+},
+"48": {
+"basics": [
+10444,
+10446,
+2924
+],
+"ult": 10450
+},
+"40": {
+"basics": [
+10356,
+3498,
+10360
+],
+"ult": 2210
+},
+"94": {
+"basics": [
+11008,
+11010,
+2950
+],
+"ult": 11014
+},
+"21": {
+"basics": [
+10260,
+10262,
+10264
+],
+"ult": 10266
+},
+"8": {
+"basics": [
+10056,
+10058,
+10054
+],
+"ult": 10060
+},
+"126": {
+"basics": [
+15402,
+12940,
+15420
+],
+"ult": 15410
+},
+"81": {
+"basics": [
+10852,
+10854,
+10856
+],
+"ult": 10858
+},
+"27": {
+"basics": [
+10156,
+10158,
+10160
+],
+"ult": 10162
+},
+"60": {
+"basics": [
+10550,
+10552,
+10718
+],
+"ult": 10556
+},
+"100": {
+"basics": [
+11130,
+11132,
+14644
+],
+"ult": 11136
+},
+"13": {
+"basics": [
+10138,
+10142,
+10144
+],
+"ult": 10146
+},
+"44": {
+"basics": [
+10380,
+10382,
+2574
+],
+"ult": 10386
+},
+"45": {
+"basics": [
+10372,
+10374,
+10376
+],
+"ult": 10378
+},
+"77": {
+"basics": [
+10790,
+10792,
+10794
+],
+"ult": 10796
+},
+"108": {
+"basics": [
+11226,
+11228,
+11230
+],
+"ult": 1730
+},
+"31": {
+"basics": [
+10268,
+10272,
+14650
+],
+"ult": 10274
+},
+"4": {
+"basics": [
+10030,
+10032,
+10034
+],
+"ult": 10036
+},
+"138": {
+"basics": [
+11502,
+11504,
+11506
+],
+"ult": 11508
+},
+"76": {
+"basics": [
+10782,
+10784,
+10550
+],
+"ult": 10788
+},
+"54": {
+"basics": [
+10498,
+10502,
+10500
+],
+"ult": 10504
+},
+"78": {
+"basics": [
+10800,
+14620,
+10804
+],
+"ult": 10806
+},
+"79": {
+"basics": [
+10842,
+2002,
+10846
+],
+"ult": 10850
+},
+"36": {
+"basics": [
+10316,
+2540,
+10318
+],
+"ult": 10322
+},
+"57": {
+"basics": [
+10526,
+1790,
+1312
+],
+"ult": 10532
+},
+"63": {
+"basics": [
+10578,
+10580,
+10582
+],
+"ult": 10584
+},
+"55": {
+"basics": [
+10510,
+10512,
+10514
+],
+"ult": 10516
+},
+"25": {
+"basics": [
+10080,
+10082,
+10084
+],
+"ult": 10086
+},
+"86": {
+"basics": [
+10896,
+10900,
+14640
+],
+"ult": 11224
+},
+"90": {
+"basics": [
+10942,
+10952,
+10946
+],
+"ult": 10948
+},
+"35": {
+"basics": [
+10308,
+10310,
+10312
+],
+"ult": 10314
+}
+}
+}

@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.pyc
+*.egg-info/
+.pixi/
+.env
+
+# frontend
+web/node_modules/
+web/dist/
+web/.vite/
+web/tsconfig.tsbuildinfo
+
+# work dirs (data; only the released artifacts below are tracked)
+work_*/
+work/*
+!work/results/
+!work/models/
+!work/dataset/
+work/dataset/*
+!work/dataset/vocabs.json
+!work/dataset/lookups.json

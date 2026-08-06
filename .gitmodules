@@ -1,0 +1,3 @@
+[submodule "dota2-ad-parser"]
+	path = dota2-ad-parser
+	url = https://github.com/dota2-bkb/dota2-ad-parser.git

@@ -1,0 +1,11 @@
+{
+  "include": [
+    "src/dota2ad",
+    "experiments"
+  ],
+  "venvPath": ".pixi/envs",
+  "venv": "default",
+  "pythonVersion": "3.14",
+  "reportPrivateImportUsage": "none",
+  "reportMissingImports": "none"
+}

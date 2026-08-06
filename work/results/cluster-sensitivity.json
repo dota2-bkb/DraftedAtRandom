@@ -1,0 +1,14 @@
+{
+  "bc_account_widening": 0.011540161162827856,
+  "n_clusters_account": 9050,
+  "n_clusters_day": 13,
+  "n_clusters_match": 6834,
+  "n_picks": 12310,
+  "q_account_widening": -0.005382311918908034,
+  "width_bc_account": 0.05817511313764491,
+  "width_bc_day": 0.06124499726874442,
+  "width_bc_match": 0.057511422058387704,
+  "width_q_account": 0.05790457766159565,
+  "width_q_day": 0.03460848289572509,
+  "width_q_match": 0.05821792469155711
+}
