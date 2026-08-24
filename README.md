@@ -191,7 +191,9 @@ files). To run one experiment or resume a partial pipeline, see the
 [RUNBOOK](experiments/RUNBOOK.md).
 
 The trained checkpoints and result manifests
-ship with the repo (`work/models/`, `work/results/`), so on a fresh clone
+ship with the repo (`work/models/`, `work/results/` — including the raw
+popularity / win-rate / pair-synergy tables as CSVs in
+`work/results/tables/`), so on a fresh clone
 `pixi run check-docs` passes and the app serves without running the pipeline:
 `pixi run backend` and `pixi run frontend`.
 

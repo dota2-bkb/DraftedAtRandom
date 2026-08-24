@@ -34,3 +34,13 @@ robustness is left as an on-demand rerun (the training scripts' `--seed` flags +
 `run.py --q-ckpt` to score an alternative checkpoint). The score
 transform is noisier <!--n stats-causal-rank: (BC {score_beta_bc:+.3f}, Q {score_beta_q:+.3f}; Q − BC = {score_dbeta:+.3f} [{score_dbeta_lo:+.3f},{score_dbeta_hi:+.3f}])-->(BC +0.308, Q +0.266; Q − BC = -0.042 [-0.140,+0.053])<!--/n-->; rank is primary.
 See REPORT.md §5–6 for the margin logic.
+
+**Raw tables:** `static_rank.py` scores the community-practice reference rankers
+(popularity, win-rate, pair-synergy; REPORT.md §6) and writes the raw tables behind
+them — unshrunk counts over train-split matches — to `work/results/tables/`:
+[`popularity.csv`](../../work/results/tables/popularity.csv) (sorted by pick rate) and
+[`winrate.csv`](../../work/results/tables/winrate.csv) (sorted by win rate) render as
+searchable tables on GitHub;
+[`pair_winrate.csv`](../../work/results/tables/pair_winrate.csv) (~13 MB, 185k pairs,
+most-drafted first) is too large for GitHub's viewer — load it with pandas/DuckDB.
+`--tables-only` rebuilds just those files.

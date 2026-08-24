@@ -552,7 +552,8 @@ Three readings:
    (`stats-causal-rank/static_rank.py`): <!--n static-rank: ≈ {share_of_bc_pct:.0f}% of BC's effect-->≈ 74% of BC's effect<!--/n--> is "commonly picked abilities
    are genuinely better abilities". The tables the community actually drafts by hold too —
    the observational win-rate and pair-synergy forms served by community stat sites
-   (e.g., [windrun.io](https://windrun.io)), rebuilt here from our own train split: the per-ability
+   (e.g., [windrun.io](https://windrun.io)), rebuilt here from our own train split (the raw
+   tables ship as CSVs in `work/results/tables/`): the per-ability
    win-rate table reaches <!--n static-rank: ≈ {wr_raw_share_pct:.0f}% of BC-->≈ 59% of BC<!--/n-->
    (β̂ = <!--n static-rank: {wr_raw_beta:+.3f} [{wr_raw_beta_lo:+.3f}, {wr_raw_beta_hi:+.3f}]-->+0.054 [+0.027, +0.083]<!--/n-->; empirical-Bayes shrinkage is inert — the corpus gives
    each item hundreds of observations), and the pair-synergy "combos" form — a candidate

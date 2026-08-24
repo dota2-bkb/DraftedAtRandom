@@ -21,12 +21,18 @@ marginal-CI overlap. The win-rate and pair rankers were added after the
 primary analysis plan was fixed — each is fully determined by train-split
 tables plus a val-selected shrinkage strength; no parameter touches test.
 
+Each run also writes the raw tables themselves (unshrunk counts, all items,
+train split only) as CSVs to `<root>/results/tables/` — popularity.csv,
+winrate.csv, pair_winrate.csv — which ship with the repo. `--tables-only`
+rebuilds just those files without touching the evaluation.
+
 Run:
   DOTA2AD_ROOT=work pixi run -e cuda python experiments/stats-causal-rank/static_rank.py
 """
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from collections.abc import Sequence
 from itertools import combinations
@@ -57,6 +63,8 @@ SHRINK_GRID = [10, 30, 100, 300, 1000]
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--bootstrap", type=int, default=2000)
+    ap.add_argument("--tables-only", action="store_true",
+                    help="write results/tables/*.csv and exit (no eval)")
     args = ap.parse_args()
     paths = default_paths()
 
@@ -109,6 +117,46 @@ def main() -> int:
                 n_p[(a, b)] = n_p.get((a, b), 0) + 1
                 w_p[(a, b)] = w_p.get((a, b), 0.0) + won
     print(f"win-rate table: {len(n_a)} items; pair table: {len(n_p)} pairs")
+
+    # --- release the raw tables (unshrunk counts, train split only) ---
+    inv: dict[int, str] = {i: k for k, i in vocabs.draft_id_to_index.items()}
+    lookups = json.loads((paths.dataset / "lookups.json").read_text())
+
+    def name(u: int) -> tuple[str, str]:
+        kind, raw = inv[u].split(":")
+        return (("hero", lookups["hero_id_to_name"][raw]) if kind == "h"
+                else ("ability", lookups["ability_id_to_name"][raw]))
+
+    tables_dir = paths.root / "results" / "tables"
+    tables_dir.mkdir(parents=True, exist_ok=True)
+
+    def write_table(fname, header, rows, key):
+        rows = sorted(rows, key=key)
+        with open(tables_dir / fname, "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(header)
+            w.writerows(rows)
+        print(f"table → {tables_dir / fname} ({len(rows)} rows)")
+
+    write_table(
+        "popularity.csv",
+        ["kind", "key", "pool_appearances", "deliberate_picks", "pick_rate"],
+        ((*name(a), n, delib.get(a, 0), f"{delib.get(a, 0) / n:.6f}")
+         for a, n in pool_app.items()),
+        key=lambda r: (-r[3] / r[2], r[0], r[1]))       # pick_rate desc
+    write_table(
+        "winrate.csv",
+        ["kind", "key", "matches", "wins", "win_rate"],
+        ((*name(a), n, int(w_a[a]), f"{w_a[a] / n:.6f}") for a, n in n_a.items()),
+        key=lambda r: (-r[3] / r[2], r[0], r[1]))       # win_rate desc
+    write_table(
+        "pair_winrate.csv",
+        ["kind_a", "key_a", "kind_b", "key_b", "matches", "wins", "win_rate"],
+        ((*name(a), *name(b), n, int(w_p[(a, b)]), f"{w_p[(a, b)] / n:.6f}")
+         for (a, b), n in n_p.items()),
+        key=lambda r: (-r[4], r[0], r[1], r[2], r[3]))  # most-drafted pairs first
+    if args.tables_only:
+        return 0
 
     def wr(a: int, m_: float) -> float:
         n = n_a.get(a, 0)
